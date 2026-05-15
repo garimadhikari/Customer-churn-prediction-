@@ -1,6 +1,4 @@
 # Customer Churn Prediction Using Machine Learning
-**CS7050NI – Artificial Intelligence | 60% Individual Coursework**
-**Student:** Garima Adhikari | **ID:** np01ms7a250052 | Islington College
 
 ---
 
