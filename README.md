@@ -4,7 +4,7 @@
 
 ## Project Overview
 
-This project implements and compares four supervised machine learning classifiers — Logistic Regression, Random Forest, Gradient Boosting, and ANN — for customer churn prediction across two datasets of contrasting scale (10k and 505k records). Key contributions include a data-leakage investigation, ANN architecture search, and cross-dataset scale analysis.
+This project implements and compares four supervised machine learning classifiers: Logistic Regression, Random Forest, Gradient Boosting, and ANN for customer churn prediction across two datasets of contrasting scale (10k and 505k records). Key contributions include a data-leakage investigation, ANN architecture search, and cross-dataset scale analysis.
 
 ---
 
@@ -51,13 +51,13 @@ In Jupyter: **Kernel → Restart & Run All**
 
 The notebook runs all experiments in order:
 1. EDA on the primary dataset
-2. Preprocessing (label encoding, SMOTE, scaling)
-3. Data leakage investigation (Complain feature)
-4. Model training and evaluation — 10k dataset
-5. ANN architecture search
-6. Large dataset (505k) — merge, re-split, train, evaluate
-7. Final summary plots
-
+2. Preprocessing (label encoding, feature engineering, SMOTE, scaling)
+3. Model training and evaluation — WITH Complain (10k dataset)  ← missing from README
+4. Data leakage investigation (Complain feature correlation revealed)
+5. Model training and evaluation — WITHOUT Complain (clean 10k experiment)
+6. ANN architecture search (on the clean 10k dataset)
+7. Large dataset (505k) — merge, re-split, train, evaluate all 4 models
+8. Final summary plots
 Outputs (plots, saved models) are written to the `outputs/` folder automatically.
 
 ---
