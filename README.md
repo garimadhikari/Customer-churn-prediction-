@@ -52,7 +52,7 @@ In Jupyter: **Kernel → Restart & Run All**
 The notebook runs all experiments in order:
 1. EDA on the primary dataset
 2. Preprocessing (label encoding, feature engineering, SMOTE, scaling)
-3. Model training and evaluation — WITH Complain (10k dataset)  ← missing from README
+3. Model training and evaluation — WITH Complain (10k dataset)  
 4. Data leakage investigation (Complain feature correlation revealed)
 5. Model training and evaluation — WITHOUT Complain (clean 10k experiment)
 6. ANN architecture search (on the clean 10k dataset)
