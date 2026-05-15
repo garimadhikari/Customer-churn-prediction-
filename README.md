@@ -84,12 +84,14 @@ All random states are fixed at `random_state=42`. Results should be identical ac
 
 ## Key Results
 
-| Dataset | Best Model | F1 | ROC-AUC |
-|---|---|---|---|
-| 10k (banking) | Gradient Boosting | 0.619 | 0.870 |
-| 505k (subscription) | Random Forest | 0.946 | 0.953 |
+| Dataset | Best F1 Model | F1 | Best ROC-AUC Model | ROC-AUC |
+|---|---|---|---|---|
+| 10k — no Complain | Gradient Boosting | 0.611 | Gradient Boosting | 0.857 |
+| 505k — large dataset | Random Forest | 0.946 | ANN | 0.954 |
 
-> Initial scores on the 10k dataset were inflated (F1 > 0.99) due to the `Complain` feature being a leaky predictor. All final results exclude this feature.
+> **Key finding:** ANN showed the greatest improvement of any model when scaled from 10k → 505k records (+0.42 F1), eliminating overfitting entirely (gap: 0.20 → 0.00). On small data, Gradient Boosting is the most reliable choice.
+
+> Initial scores on the 10k dataset were inflated (F1 > 0.99) due to the `Complain` feature being a near-perfect leaky predictor (r ≈ 1.00 with target). All final results exclude this feature.
 
 ---
 
